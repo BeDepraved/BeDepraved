@@ -16,6 +16,10 @@ gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', br
 # https://github.com/spree/spree_gateway/tree/2-4-stable
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 
+# Spree order comments
+# https://github.com/spree-contrib/spree_comments/tree/2-4-stable
+gem "spree_comments", github: 'spree/spree_comments', branch: '2-4-stable'
+
 # End User Installed Gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

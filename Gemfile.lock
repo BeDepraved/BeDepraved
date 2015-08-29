@@ -75,6 +75,17 @@ GIT
       spree_core (~> 2.4.0)
 
 GIT
+  remote: git://github.com/spree/spree_comments.git
+  revision: 74793b99fa299a6775a9d346c36795a20cfe5bf1
+  branch: 2-4-stable
+  specs:
+    spree_comments (2.0.0)
+      acts_as_commentable (= 4.0.1)
+      spree_api (~> 2.4.2)
+      spree_backend (~> 2.4.2)
+      spree_core (~> 2.4.2)
+
+GIT
   remote: git://github.com/spree/spree_gateway.git
   revision: 3b40ced38a7643be6a83a9ee1901066e5d765e6c
   branch: 2-4-stable
@@ -122,6 +133,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts_as_commentable (4.0.1)
     acts_as_list (0.7.2)
       activerecord (>= 3.0)
     addressable (2.3.8)
@@ -318,6 +330,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree!
   spree_auth_devise!
+  spree_comments!
   spree_gateway!
   spree_product_assembly!
   spring
