@@ -8,6 +8,9 @@ gem 'spree', github: 'spree/spree', branch: '2-4-stable'
 # Spree Devise Support
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 
+# Product Assembly make two products one ie bundle shit
+# https://github.com/spree-contrib/spree-product-assembly/tree/2-4-stable
+gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: '2-4-stable'
 
 # End User Installed Gems
 

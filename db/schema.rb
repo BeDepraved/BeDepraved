@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829151311) do
+ActiveRecord::Schema.define(version: 20150829185712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,13 @@ ActiveRecord::Schema.define(version: 20150829151311) do
   add_index "spree_adjustments", ["eligible"], name: "index_spree_adjustments_on_eligible", using: :btree
   add_index "spree_adjustments", ["order_id"], name: "index_spree_adjustments_on_order_id", using: :btree
   add_index "spree_adjustments", ["source_id", "source_type"], name: "index_spree_adjustments_on_source_id_and_source_type", using: :btree
+
+  create_table "spree_assemblies_parts", force: true do |t|
+    t.integer "assembly_id",                            null: false
+    t.integer "part_id",                                null: false
+    t.integer "count",                      default: 1, null: false
+    t.boolean "variant_selection_deferred"
+  end
 
   create_table "spree_assets", force: true do |t|
     t.integer  "viewable_id"
@@ -310,6 +317,12 @@ ActiveRecord::Schema.define(version: 20150829151311) do
 
   add_index "spree_orders_promotions", ["order_id", "promotion_id"], name: "index_spree_orders_promotions_on_order_id_and_promotion_id", using: :btree
 
+  create_table "spree_part_line_items", force: true do |t|
+    t.integer "line_item_id",             null: false
+    t.integer "variant_id",               null: false
+    t.integer "quantity",     default: 1
+  end
+
   create_table "spree_payment_capture_events", force: true do |t|
     t.decimal  "amount",     precision: 10, scale: 2, default: 0.0
     t.integer  "payment_id"
@@ -400,7 +413,7 @@ ActiveRecord::Schema.define(version: 20150829151311) do
   add_index "spree_product_properties", ["property_id"], name: "index_spree_product_properties_on_property_id", using: :btree
 
   create_table "spree_products", force: true do |t|
-    t.string   "name",                 default: "",   null: false
+    t.string   "name",                 default: "",    null: false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -413,6 +426,8 @@ ActiveRecord::Schema.define(version: 20150829151311) do
     t.datetime "updated_at"
     t.boolean  "promotionable",        default: true
     t.string   "meta_title"
+    t.boolean  "can_be_part",          default: false, null: false
+    t.boolean  "individual_sale",      default: true,  null: false
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on", using: :btree
