@@ -20,6 +20,10 @@ gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 # https://github.com/spree-contrib/spree_comments/tree/2-4-stable
 gem "spree_comments", github: 'spree/spree_comments', branch: '2-4-stable'
 
+# Spree Reffiliate, customers share shit
+# https://github.com/kinduff/spree_reffiliate
+gem 'spree_reffiliate'
+
 # End User Installed Gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
