@@ -12,6 +12,10 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 # https://github.com/spree-contrib/spree-product-assembly/tree/2-4-stable
 gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: '2-4-stable'
 
+# Spree Payment Gateways
+# https://github.com/spree/spree_gateway/tree/2-4-stable
+gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
+
 # End User Installed Gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
