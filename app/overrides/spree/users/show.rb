@@ -19,7 +19,6 @@ Deface::Override.new(
       </div>
       <!-- End Social-Like Buttons -->
       </dd>
-
       <!-- Switched from user count to sales count -->
       <dt>Referred Sales</dt>
       <dd><%= @user.referral.referred_orders.count %></dd>
