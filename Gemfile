@@ -24,6 +24,10 @@ gem "spree_comments", github: 'spree/spree_comments', branch: '2-4-stable'
 # https://github.com/kinduff/spree_reffiliate
 gem 'spree_reffiliate'
 
+# Heroku Needed Gems
+gem 'rails_12factor'
+ruby '2.1.5'
+
 # End User Installed Gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
