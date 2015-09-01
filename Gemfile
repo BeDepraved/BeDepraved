@@ -28,6 +28,10 @@ gem 'spree_reffiliate'
 gem 'rails_12factor'
 ruby '2.1.5'
 
+# Figaro keep track of keys
+# https://github.com/laserlemon/figaro
+gem "figaro"
+
 # End User Installed Gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
